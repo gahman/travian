@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travian.Web.API", "Travian.Web.API\Travian.Web.API.csproj", "{8486BCDD-CFAB-4BE3-9AD1-C58B97174BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travian.Web.API.Tests", "Travian.Web.API.Tests\Travian.Web.API.Tests.csproj", "{788F6F4D-396B-423B-8F27-3A61C454AFD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travian.Web.UI", "Travian.Web.UI\Travian.Web.UI.csproj", "{20DE3054-134B-449A-8A42-2290D82B5F54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8486BCDD-CFAB-4BE3-9AD1-C58B97174BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8486BCDD-CFAB-4BE3-9AD1-C58B97174BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8486BCDD-CFAB-4BE3-9AD1-C58B97174BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8486BCDD-CFAB-4BE3-9AD1-C58B97174BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{788F6F4D-396B-423B-8F27-3A61C454AFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{788F6F4D-396B-423B-8F27-3A61C454AFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{788F6F4D-396B-423B-8F27-3A61C454AFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{788F6F4D-396B-423B-8F27-3A61C454AFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20DE3054-134B-449A-8A42-2290D82B5F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20DE3054-134B-449A-8A42-2290D82B5F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20DE3054-134B-449A-8A42-2290D82B5F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20DE3054-134B-449A-8A42-2290D82B5F54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

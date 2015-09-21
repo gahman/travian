@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-controller="Main as vm">
+
+    <div class="container">
+        <div ng-include="'Views/navbar.html'"></div>
+    </div>
+
+    <div ng-include="'Views/player.html'"></div>
+
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="app/model.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.js"></script>
+</body>
+</html>

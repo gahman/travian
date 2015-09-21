@@ -1,0 +1,20 @@
+Exempel anrop:
+CSV
+http://travianstats.de/api-player-csv_overview/ts19.travian.se/2521.csv
+
+http://travianstats.de/api-player-csv_history/ts19.travian.se/2521.csv
+
+
+XML
+village statistics
+http://travianstats.de/api-village/ts19.travian.se/14881.xml
+
+alliance statistics
+http://travianstats.de/api-alliance/ts19.travian.se/9.xml
+
+player statistics
+http://travianstats.de/api-player/ts19.travian.se/2521.xml
+
+
+
+http://travianstats.de/api-player/tx3.travian.se/2403.xml

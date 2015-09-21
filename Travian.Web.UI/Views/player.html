@@ -1,0 +1,29 @@
+﻿<div class="form-group">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <input type="text" ng-model="vm.uid" placeholder="enter player uid (ex 2403)">
+            <button class="btn btn-success" ng-click="vm.getPlayer(vm.uid)">
+                <span class="glyphicon glyphicon-set"></span>Add
+            </button>
+        </div>
+    </form>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>X</th>
+                <th>Y</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="village in vm.player.villages | orderBy: 'name'">
+                <td>{{ village.name }}</td>
+                <td>{{ village.x }}</td>
+                <td>{{ village.y }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

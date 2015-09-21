@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api>
+	<player>
+		<uid>2521</uid>
+		<name>GaLiKi!</name>
+		<aid>0</aid>
+		<alliance></alliance>
+		<tribe>1</tribe>
+		<database>sets19</database>
+		<server>ts19.travian.se</server>
+	</player>
+	<villages>
+		<data>
+			<did>28846</did>
+			<name>00 Electric Avenue</name>
+			<inhabitants>81</inhabitants>
+			<coordinates>-5|-37</coordinates>
+			<village_xml>http://travianstats.de/api-village/ts19.travian.se/28846.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=28846&amp;w=sets19</village_link>
+		</data>
+	</villages>
+	<history>
+		<data>
+			<date>2015-09-16</date>
+			<rank>342</rank>
+			<villages>1</villages>
+			<inhabitants>81</inhabitants>
+		</data>
+	</history>
+	<domain>travianstats.de</domain>
+	<statslink>http://travianstats.de/index.php?m=player_info&amp;uid=2521&amp;w=sets19</statslink>
+	<flash_inhabitants>http://travianstats.de/flash/compl_inhab/sets19/2521.php</flash_inhabitants>
+	<flash_rank>http://travianstats.de/flash/compl_rank/sets19/2521.php</flash_rank>
+	<compression></compression>
+	<calc>0.022616</calc>
+</api>

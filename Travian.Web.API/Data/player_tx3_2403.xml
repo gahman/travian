@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api>
+	<player>
+		<uid>2403</uid>
+		<name>Klurig</name>
+		<aid>424</aid>
+		<alliance>TF!</alliance>
+		<tribe>3</tribe>
+		<database>setx3</database>
+		<server>tx3.travian.se</server>
+	</player>
+	<villages>
+		<data>
+			<did>5260</did>
+			<name>01 Caesars Palace</name>
+			<inhabitants>1076</inhabitants>
+			<coordinates>14|-159</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/5260.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=5260&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>7857</did>
+			<name>02 Excalibur</name>
+			<inhabitants>996</inhabitants>
+			<coordinates>13|-157</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/7857.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=7857&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>71536</did>
+			<name>03 Cosmopolitan</name>
+			<inhabitants>970</inhabitants>
+			<coordinates>7|-165</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/71536.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=71536&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>71905</did>
+			<name>04 Flamingo</name>
+			<inhabitants>899</inhabitants>
+			<coordinates>23|-156</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/71905.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=71905&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>72402</did>
+			<name>05 Luxor</name>
+			<inhabitants>980</inhabitants>
+			<coordinates>20|-157</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/72402.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=72402&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>72926</did>
+			<name>06 Mandalay Bay</name>
+			<inhabitants>894</inhabitants>
+			<coordinates>21|-152</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/72926.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=72926&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>73378</did>
+			<name>07 Monte Carlo</name>
+			<inhabitants>944</inhabitants>
+			<coordinates>13|-152</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/73378.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=73378&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>73663</did>
+			<name>08 Bellagio</name>
+			<inhabitants>939</inhabitants>
+			<coordinates>14|-160</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/73663.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=73663&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>74073</did>
+			<name>09 Vdara</name>
+			<inhabitants>785</inhabitants>
+			<coordinates>23|-160</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/74073.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=74073&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>74410</did>
+			<name>10 Venetian</name>
+			<inhabitants>944</inhabitants>
+			<coordinates>7|-153</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/74410.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=74410&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>74700</did>
+			<name>11 Tropicana</name>
+			<inhabitants>939</inhabitants>
+			<coordinates>27|-153</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/74700.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=74700&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>75024</did>
+			<name>12 Aria</name>
+			<inhabitants>928</inhabitants>
+			<coordinates>3|-149</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/75024.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=75024&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>75338</did>
+			<name>13 Wynn</name>
+			<inhabitants>950</inhabitants>
+			<coordinates>9|-159</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/75338.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=75338&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>75816</did>
+			<name>14 Treasure Island</name>
+			<inhabitants>988</inhabitants>
+			<coordinates>14|-158</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/75816.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=75816&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>76027</did>
+			<name>15 Harrah´s</name>
+			<inhabitants>961</inhabitants>
+			<coordinates>0|-152</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/76027.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=76027&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>76214</did>
+			<name>16 New York-New York</name>
+			<inhabitants>853</inhabitants>
+			<coordinates>0|-164</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/76214.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=76214&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>76444</did>
+			<name>17 MGM Grand</name>
+			<inhabitants>896</inhabitants>
+			<coordinates>-1|-160</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/76444.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=76444&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>76639</did>
+			<name>18 Mirage</name>
+			<inhabitants>950</inhabitants>
+			<coordinates>-5|-153</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/76639.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=76639&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>76770</did>
+			<name>19 Palazzo</name>
+			<inhabitants>928</inhabitants>
+			<coordinates>7|-142</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/76770.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=76770&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>76889</did>
+			<name>20 Delano</name>
+			<inhabitants>950</inhabitants>
+			<coordinates>13|-155</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/76889.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=76889&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>77040</did>
+			<name>21 Linq</name>
+			<inhabitants>961</inhabitants>
+			<coordinates>21|-147</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/77040.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=77040&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>77203</did>
+			<name>22 Circus Circus</name>
+			<inhabitants>941</inhabitants>
+			<coordinates>11|-168</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/77203.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=77203&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>6265</did>
+			<name>23 Bally´s</name>
+			<inhabitants>1020</inhabitants>
+			<coordinates>23|-180</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/6265.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=6265&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>77408</did>
+			<name>24 Cromwell</name>
+			<inhabitants>969</inhabitants>
+			<coordinates>22|-180</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/77408.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=77408&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>77575</did>
+			<name>25 Casino Royale</name>
+			<inhabitants>899</inhabitants>
+			<coordinates>23|-178</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/77575.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=77575&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>77860</did>
+			<name>26 Planet Hollywood</name>
+			<inhabitants>861</inhabitants>
+			<coordinates>16|-182</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/77860.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=77860&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>77732</did>
+			<name>27 Mandarin Oriental</name>
+			<inhabitants>982</inhabitants>
+			<coordinates>62|-127</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/77732.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=77732&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>77867</did>
+			<name>28 Encore</name>
+			<inhabitants>861</inhabitants>
+			<coordinates>9|-177</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/77867.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=77867&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78002</did>
+			<name>29 Paris</name>
+			<inhabitants>1000</inhabitants>
+			<coordinates>19|-178</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78002.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78002&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78126</did>
+			<name>30 Golden Nugget</name>
+			<inhabitants>981</inhabitants>
+			<coordinates>18|-168</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78126.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78126&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78222</did>
+			<name>31 Boulder Station</name>
+			<inhabitants>999</inhabitants>
+			<coordinates>8|-175</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78222.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78222&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78355</did>
+			<name>32 Stratosphere</name>
+			<inhabitants>969</inhabitants>
+			<coordinates>-10|-146</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78355.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78355&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78502</did>
+			<name>33 Veer Towers</name>
+			<inhabitants>967</inhabitants>
+			<coordinates>0|-148</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78502.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78502&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78517</did>
+			<name>34 Westin</name>
+			<inhabitants>940</inhabitants>
+			<coordinates>-5|-146</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78517.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78517&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78647</did>
+			<name>35 Harmon</name>
+			<inhabitants>859</inhabitants>
+			<coordinates>34|-168</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78647.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78647&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78656</did>
+			<name>36 SLS</name>
+			<inhabitants>826</inhabitants>
+			<coordinates>33|-168</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78656.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78656&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78701</did>
+			<name>37 Klondike</name>
+			<inhabitants>827</inhabitants>
+			<coordinates>35|-172</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78701.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78701&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78763</did>
+			<name>38 Riviera</name>
+			<inhabitants>768</inhabitants>
+			<coordinates>33|-173</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78763.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78763&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78825</did>
+			<name>39 New Frontier</name>
+			<inhabitants>703</inhabitants>
+			<coordinates>2|-138</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78825.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78825&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>78871</did>
+			<name>40 Dunes</name>
+			<inhabitants>616</inhabitants>
+			<coordinates>3|-137</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/78871.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=78871&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>79087</did>
+			<name>41 Marina</name>
+			<inhabitants>478</inhabitants>
+			<coordinates>6|-166</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/79087.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=79087&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>79089</did>
+			<name>42 Crown</name>
+			<inhabitants>484</inhabitants>
+			<coordinates>15|-159</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/79089.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=79089&amp;w=setx3</village_link>
+		</data>
+		<data>
+			<did>79090</did>
+			<name>43 Westward Ho</name>
+			<inhabitants>487</inhabitants>
+			<coordinates>12|-159</coordinates>
+			<village_xml>http://travianstats.de/api-village/tx3.travian.se/79090.xml</village_xml>
+			<village_link>http://travianstats.de/index.php?m=village_info&amp;did=79090&amp;w=setx3</village_link>
+		</data>
+	</villages>
+	<history>
+		<data>
+			<date>2015-09-16</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>38168</inhabitants>
+		</data>
+		<data>
+			<date>2015-09-15</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>38120</inhabitants>
+		</data>
+		<data>
+			<date>2015-09-14</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>38074</inhabitants>
+		</data>
+		<data>
+			<date>2015-09-13</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>38000</inhabitants>
+		</data>
+		<data>
+			<date>2015-09-12</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>37949</inhabitants>
+		</data>
+		<data>
+			<date>2015-09-11</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>37825</inhabitants>
+		</data>
+		<data>
+			<date>2015-09-10</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>37687</inhabitants>
+		</data>
+		<data>
+			<date>2015-09-09</date>
+			<rank>7</rank>
+			<villages>43</villages>
+			<inhabitants>37580</inhabitants>
+		</data>
+	</history>
+	<domain>travianstats.de</domain>
+	<statslink>http://travianstats.de/index.php?m=player_info&amp;uid=2403&amp;w=setx3</statslink>
+	<flash_inhabitants>http://travianstats.de/flash/compl_inhab/setx3/2403.php</flash_inhabitants>
+	<flash_rank>http://travianstats.de/flash/compl_rank/setx3/2403.php</flash_rank>
+	<compression></compression>
+	<calc>0.011173</calc>
+</api>
