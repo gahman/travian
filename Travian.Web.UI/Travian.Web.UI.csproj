@@ -66,14 +66,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\playerController.js" />
+    <Content Include="app\villageController.js" />
     <Content Include="Content\Dashboard.css" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -82,7 +87,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.module.js" />
     <Content Include="app\main.js" />
     <Content Include="app\model.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -107,8 +111,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Views\alliance.html" />
     <Content Include="Views\navbar.html" />
     <Content Include="Views\player.html" />
+    <Content Include="Views\village.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

@@ -1,51 +1,46 @@
 ﻿(function () {
     'use strict';
 
-    angular
-        .module('app', ['ngResource'])
-        .config(function ($httpProvider) {
+    angular.module('app', ['ngResource', 'ngRoute'])
+
+        .config(function ($routeProvider) {
+            $routeProvider
+                // route for the player page
+                .when('/', {
+                    templateUrl: 'views/player.html',
+                    controller: 'playerController as vm'
+                })
+
+                // route for the player page
+                .when('/player', {
+                    templateUrl: 'views/player.html',
+                    controller: 'playerController as vm'
+                })
+
+                // route for the village page
+                .when('/village', {
+                    templateUrl: 'views/village.html',
+                    controller: 'villageController'
+                })
+
+                // route for the alliance page
+                .when('/alliance', {
+                    templateUrl: 'views/alliance.html',
+                    controller: 'allianceController'
+                });
         })
-        .controller('Main', main)
+
+        .controller('mainController', function ($scope) {
+            $scope.navigated = "in main controller";
+
+        })
+
+        .controller('allianceController', allianceController)
+
         .factory('travianFactory', travianFactory);
 
-    function main(travianFactory) {
-        var vm = this; // capture the scope
-        vm.uid = '';
-        vm.player = new Player;
-
-        vm.setUID = function (uid) {
-            vm.uid = uid;
-        }
-
-        vm.getPlayer = function (uid) {
-            travianFactory.travian().get({ id: uid }, function (data) {
-                vm.player = data.api.player;
-                vm.player.villages = [];
-
-                console.log("player name: " + vm.player.name);
-
-                angular.forEach(data.api.villages.data, function (value, key) {
-                    var village = new Village;
-                    village.name = value.name;
-                    village.id = value.id;
-                    village.population = value.inhabitants;
-                    village.coordinates = value.coordinates;
-                    vm.player.villages.push(village);
-                });
-            }, function (error) {
-                console.log("failed to get player with id: " + uid);
-                // TODO: notify user
-            });
-            vm.uid = '';
-        }
-
-        vm.savePlayer = function (player) {
-            travianFactory.player().save(player);
-        }
-
-        vm.deletePlayer = function (id) {
-            travianFactory.delete({ id: id });
-        }
+    function allianceController($scope) {
+        $scope.navigated = "in alliance controller";
     }
 
     function travianFactory($http, $resource) {
