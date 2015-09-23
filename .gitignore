@@ -2,3 +2,9 @@ bin/
 obj/
 TestResults/
 .vs/
+output/
+
+# Temporary file directory
+tmp/
+
+crash.log
