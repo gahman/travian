@@ -20,24 +20,25 @@
 
                     console.log("player name: " + vm.player.name);
 
-
                     // if more than one village
                     console.log(Object.prototype.toString.call(data.api.villages.data));
+
+                    var mapDataToVillage = function (data, village) {
+                        village.name = data.name;
+                        village.id = data.id;
+                        village.inhabitants = data.inhabitants;
+                        village.coordinates = data.coordinates;
+                    }
+
                     if (Object.prototype.toString.call(data.api.villages.data) === '[object Array]') {
                         angular.forEach(data.api.villages.data, function (value, key) {
                             var village = new Village;
-                            village.name = value.name;
-                            village.id = value.id;
-                            village.population = value.inhabitants;
-                            village.coordinates = value.coordinates;
+                            mapDataToVillage(value, village);
                             vm.player.villages.push(village);
                         });
                     } else {
                         var village = new Village;
-                        village.name = data.api.villages.data.name;
-                        village.id = data.api.villages.data.id;
-                        village.population = data.api.villages.data.inhabitants;
-                        village.coordinates = data.api.villages.data.coordinates;
+                        mapDataToVillage(data.api.villages.data, village);
                         vm.player.villages.push(village);
                     }
 

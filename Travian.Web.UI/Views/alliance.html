@@ -26,7 +26,7 @@
         <tbody>
             <tr ng-repeat="player in vm.alliance.players | orderBy: 'player.rank'">
                 <td>{{ player.uid }}</td>
-                <td><a href="#/player?id={{player.uid}}&server=ts19">{{ player.name }}</a></td>
+                <td><a href="#/player?id={{player.uid}}&server=ts19" ng-click="$parent.selectedTab = 'player'">{{ player.name }}</a></td>
                 <td>{{ player.rank }}</td>
                 <td>{{ player.inhabitants }}</td>
             </tr>

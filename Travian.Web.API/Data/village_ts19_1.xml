@@ -1,1 +1,29 @@
-<api><village><did>1</did><name>Nataren</name><inhabitants>854</inhabitants><coordinates>-400|400</coordinates><uid>1</uid><player>Nataren</player><aid>0</aid><alliance/><tribe>5</tribe></village><history><data><date/><rank/><inhabitants/><name/><uid/><player/></data></history><domain>travianstats.de</domain><statslink>http://travianstats.de/index.php?m=village_info&did=1&w=sets19</statslink><flash_inhabitants>http://travianstats.de/flash/village_inhab/sets19/1.php</flash_inhabitants><flash_rank>http://travianstats.de/flash/village_rank/sets19/1.php</flash_rank><compression/><calc>0.022965</calc></api>
+<api>
+  <village>
+    <did>1</did>
+    <name>Nataren</name>
+    <inhabitants>854</inhabitants>
+    <coordinates>-400|400</coordinates>
+    <uid>1</uid>
+    <player>Nataren</player>
+    <aid>0</aid>
+    <alliance/>
+    <tribe>5</tribe>
+  </village>
+  <history>
+    <data>
+      <date/>
+      <rank/>
+      <inhabitants/>
+      <name/>
+      <uid/>
+      <player/>
+    </data>
+  </history>
+  <domain>travianstats.de</domain>
+  <statslink>http://travianstats.de/index.php?m=village_info&did=1&w=sets19</statslink>
+  <flash_inhabitants>http://travianstats.de/flash/village_inhab/sets19/1.php</flash_inhabitants>
+  <flash_rank>http://travianstats.de/flash/village_rank/sets19/1.php</flash_rank>
+  <compression/>
+  <calc>0.022965</calc>
+</api>

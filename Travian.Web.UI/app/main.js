@@ -34,7 +34,7 @@
         })
 
         .controller('mainController', function ($scope) {
-            $scope.navigated = "in main controller";
+            $scope.selectedTab = 'player';
 
         })
 

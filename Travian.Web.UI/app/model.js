@@ -1,5 +1,6 @@
 ﻿function Player() {
     this.uid = "";
+    this.aid = '';
     this.name = "";
     this.villages = [];
     this.alliance = "no ally";
@@ -25,11 +26,27 @@ DefensePlayer.prototype = new Player;
 
 function Village() {
     this.name = "noname";
+    this.player = '';
+    this.alliance = '';
     this.id = 0;
-    this.population = 0;
+    this.uid = 0;
+    this.aid = 0;
+    this.inhabitants = 0;
     this.x = 0;
     this.y = 0;
+    this.coordinates = '';
 }
+Village.prototype = {
+    set coordinates(coords) {
+        var c = coords.split("|");
+
+        if (c.length === 2) {
+            this.x = c[0];
+            this.y = c[1];
+        }
+    }
+};
+
 
 function Alliance() {
     this.name = "";
