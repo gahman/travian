@@ -2,11 +2,11 @@
     'use strict';
 
     angular.module('app').controller('villageController', villageController);
+    
+    function villageController() {
+        var vm = this;
+        vm.viewName = "village view";
 
-    function villageController($scope) {
-        $scope.navigated = "in village controller";
-        $scope.viewName = "village view edited";
-
-    }
+    };
 
 })();

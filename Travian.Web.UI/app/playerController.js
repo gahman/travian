@@ -3,32 +3,49 @@
 
     angular.module('app').controller('playerController', playerController);
     
-    function playerController(travianFactory) {
+    function playerController($scope, $location, travianFactory, stateService) {
         var vm = this;
-        vm.uid = '';
-        vm.player = new Player;
 
-        vm.setUID = function (uid) {
-            vm.uid = uid;
-        }
+        var userId = $location.search().id;
+        var serverName = $location.search().server;
 
-        vm.navigated = "in player controller";
+        vm.getPlayer = function (uid, server) {
+            if (typeof (server) === 'undefined') server = 'ts19';
+            travianFactory.travian().get({ id: uid, category: 'player', server: server }, function (data) {
+                if (data.api) {
 
-        vm.getPlayer = function (uid) {
-            travianFactory.travian().get({ id: uid }, function (data) {
-                vm.player = data.api.player;
-                vm.player.villages = [];
+                    vm.player = data.api.player;
+                    vm.player.villages = [];
+                    vm.player.alliance = data.api.player.alliance;
 
-                console.log("player name: " + vm.player.name);
+                    console.log("player name: " + vm.player.name);
 
-                angular.forEach(data.api.villages.data, function (value, key) {
-                    var village = new Village;
-                    village.name = value.name;
-                    village.id = value.id;
-                    village.population = value.inhabitants;
-                    village.coordinates = value.coordinates;
-                    vm.player.villages.push(village);
-                });
+
+                    // if more than one village
+                    console.log(Object.prototype.toString.call(data.api.villages.data));
+                    if (Object.prototype.toString.call(data.api.villages.data) === '[object Array]') {
+                        angular.forEach(data.api.villages.data, function (value, key) {
+                            var village = new Village;
+                            village.name = value.name;
+                            village.id = value.id;
+                            village.population = value.inhabitants;
+                            village.coordinates = value.coordinates;
+                            vm.player.villages.push(village);
+                        });
+                    } else {
+                        var village = new Village;
+                        village.name = data.api.villages.data.name;
+                        village.id = data.api.villages.data.id;
+                        village.population = data.api.villages.data.inhabitants;
+                        village.coordinates = data.api.villages.data.coordinates;
+                        vm.player.villages.push(village);
+                    }
+
+                    stateService.setActivePlayer(vm.player);
+                } else {
+                    // player not found
+
+                }
             }, function (error) {
                 console.log("failed to get player with id: " + uid);
                 // TODO: notify user
@@ -42,6 +59,17 @@
 
         vm.deletePlayer = function (id) {
             travianFactory.travian().delete({ id: id });
+        }
+
+        init();
+
+        function init() {
+            vm.player = stateService.getActivePlayer();
+            if (userId) {
+                if (vm.player.uid != userId) {
+                    vm.getPlayer(userId, serverName);
+                }
+            }
         }
     };
 })();

@@ -25,17 +25,24 @@ namespace Travian.Web.API.Controllers
             return "dummy";
         }
 
+        /// <summary>
+        /// Get content from travianstats.de as json by id. 
+        /// </summary>
+        /// <param name="id">The uid of the object to get</param>
+        /// <param name="category">Valid categories are: "player", "village", "alliance".</param>
+        /// <param name="server">Valid servers are (i.e.): "tx3", "ts19"</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<HttpResponseMessage> GetJsonAsync(int id, string category = "player", string server = "ts19")
         {
             using (HttpClient httpClient = new HttpClient())
             {
-                //string url = string.Format("http://travianstats.de/api-{0}/{1}.travian.se/{2}.xml", category, server, id);
-                //HttpResponseMessage r = await httpClient.GetAsync(url);
-                //var contentXml = await r.Content.ReadAsAsync<XElement>();
-                
-                string path = string.Format("{0}Data/{1}_{2}_{3}.xml", HttpRuntime.AppDomainAppPath, category, "tx3", "2403");
-                var contentXml = XDocument.Load(path);
+                string url = string.Format("http://travianstats.de/api-{0}/{1}.travian.se/{2}.xml", category, server, id);
+                HttpResponseMessage r = await httpClient.GetAsync(url);
+                var contentXml = await r.Content.ReadAsAsync<XElement>();
+
+                //string path = string.Format("{0}Data/{1}_{2}_{3}.xml", HttpRuntime.AppDomainAppPath, category, "tx3", "2403");
+                //var contentXml = XDocument.Load(path);
 
                 string json = Newtonsoft.Json.JsonConvert.SerializeXNode(contentXml);
                 var response = new HttpResponseMessage(HttpStatusCode.OK);

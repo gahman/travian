@@ -3,6 +3,8 @@
     this.name = "";
     this.villages = [];
     this.alliance = "no ally";
+    this.rank = 0;
+    this.inhabitants = 0;
 }
 // to make inherited instances get a prop-changed: Player.prototype.myProperty = "inherit";
 // => change using: Player.prototype.myProperty = "property changed";
@@ -27,4 +29,12 @@ function Village() {
     this.population = 0;
     this.x = 0;
     this.y = 0;
+}
+
+function Alliance() {
+    this.name = "";
+    this.aid = 0;
+    this.players = [];
+    this.database = "";
+    this.server = "";
 }

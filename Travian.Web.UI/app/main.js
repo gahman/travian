@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app', ['ngResource', 'ngRoute'])
+    angular.module('app', ['LocalStorageModule', 'ngResource', 'ngRoute'])
 
-        .config(function ($routeProvider) {
+        .config(function ($routeProvider, localStorageServiceProvider) {
             $routeProvider
                 // route for the player page
                 .when('/', {
@@ -20,14 +20,17 @@
                 // route for the village page
                 .when('/village', {
                     templateUrl: 'views/village.html',
-                    controller: 'villageController'
+                    controller: 'villageController as vm'
                 })
 
                 // route for the alliance page
                 .when('/alliance', {
                     templateUrl: 'views/alliance.html',
-                    controller: 'allianceController'
+                    controller: 'allianceController as vm'
                 });
+
+            localStorageServiceProvider.setPrefix('travian').setNotify(true, true);
+            // localStorageServiceProvider.setStorageType('sessionStorage');
         })
 
         .controller('mainController', function ($scope) {
@@ -35,13 +38,7 @@
 
         })
 
-        .controller('allianceController', allianceController)
-
         .factory('travianFactory', travianFactory);
-
-    function allianceController($scope) {
-        $scope.navigated = "in alliance controller";
-    }
 
     function travianFactory($http, $resource) {
         return ({

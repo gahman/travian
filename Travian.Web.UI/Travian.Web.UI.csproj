@@ -66,11 +66,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\allianceController.js" />
     <Content Include="app\playerController.js" />
+    <Content Include="app\stateService.js" />
     <Content Include="app\villageController.js" />
     <Content Include="Content\Dashboard.css" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\angular-local-storage.min.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.js" />

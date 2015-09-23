@@ -1,25 +1,29 @@
 ﻿<div class="form-group">
     <form class="form-horizontal">
         <div class="form-group">
-            <input type="text" ng-model="vm.uid" placeholder="enter player uid (ex 2403)">
-            <button class="btn btn-success" ng-click="vm.getPlayer(vm.uid)">
+            <input type="text" ng-model="vm.player.uid" placeholder="enter player uid (ex 2521)">
+            <button class="btn btn-success" ng-click="vm.getPlayer(vm.player.uid)">
                 <span class="glyphicon glyphicon-set"></span>Add
             </button>
         </div>
     </form>
 </div>
 
+<div>
+    Name: {{ vm.player.name }}, Alliance: {{ vm.player.alliance }}, UID: {{ vm.player.uid }}, Villages: {{ vm.villages.length }}
+</div>
+
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Name {{ vm.message }}</th>
+                <th>Name</th>
                 <th>X</th>
                 <th>Y</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="village in vm.player.villages | orderBy: 'name'">
+            <tr ng-repeat="village in vm.player.villages | orderBy: 'village.name'">
                 <td>{{ village.name }}</td>
                 <td>{{ village.x }}</td>
                 <td>{{ village.y }}</td>

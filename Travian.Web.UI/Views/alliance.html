@@ -1,3 +1,35 @@
-﻿<div>
-    Alliance view
+﻿<div class="form-group">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <input type="text" ng-model="vm.aid" placeholder="enter alliance aid (ex 9)">
+            <button class="btn btn-success" ng-click="vm.getAlliance(vm.aid)">
+                <span class="glyphicon glyphicon-set"></span>Add
+            </button>
+        </div>
+    </form>
+</div>
+
+<div>
+    Alliance: {{ vm.alliance.name }}, Players: {{ vm.alliance.players.length }}, AID: {{ vm.alliance.aid }}, Server: {{ vm.alliance.server }}
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>UID</th>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="player in vm.alliance.players | orderBy: 'player.rank'">
+                <td>{{ player.uid }}</td>
+                <td><a href="#/player?id={{player.uid}}&server=ts19">{{ player.name }}</a></td>
+                <td>{{ player.rank }}</td>
+                <td>{{ player.inhabitants }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
