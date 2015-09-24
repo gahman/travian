@@ -8,6 +8,7 @@
 	<title>T HElpEr</title>
 	<link href="Content/bootstrap.min.css" rel="stylesheet">
 	<link href="Content/dashboard.css" rel="stylesheet">
+    <link href="Content/main.css" rel="stylesheet" />
 	<!--<link href="Content/bootstrap-theme.css" rel="stylesheet" />-->
 
 	[if lt IE 9]>
@@ -16,7 +17,7 @@
 	<![endif]
 
 </head>
-<body ng-controller="mainController as main">
+<body ng-controller="mainController">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -45,7 +46,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-3 col-md-2 sidebar">
-				<ul class="nav nav-sidebar" ng-init="selectedTab = 'player'">
+				<ul class="nav nav-sidebar">
 					<li ng-class="{'active':selectedTab === 'player'}" ng-click="selectedTab = 'player'"><a href="#player">Player import<span class="sr-only">(current)</span></a></li>
 					<li ng-class="{'active':selectedTab === 'village'}" ng-click="selectedTab = 'village'"><a href="#village">Village</a></li>
 					<li ng-class="{'active':selectedTab === 'alliance'}" ng-click="selectedTab = 'alliance'"><a href="#alliance">Alliance</a></li>

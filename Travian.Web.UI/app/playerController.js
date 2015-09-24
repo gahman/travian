@@ -9,6 +9,14 @@
         var userId = $location.search().id;
         var serverName = $location.search().server;
 
+        // selection in table
+        vm.idSelectedVillage = null;
+        vm.setSelectedVillage = function (idSelected) {
+            vm.idSelectedVillage = idSelected;
+
+            // TODO: calculate time-table...
+        }
+
         vm.getPlayer = function (uid, server) {
             if (typeof (server) === 'undefined') server = 'ts19';
             travianFactory.travian().get({ id: uid, category: 'player', server: server }, function (data) {
@@ -20,24 +28,25 @@
 
                     console.log("player name: " + vm.player.name);
 
-
                     // if more than one village
                     console.log(Object.prototype.toString.call(data.api.villages.data));
+
+                    var mapDataToVillage = function (data, village) {
+                        village.name = data.name;
+                        village.did = data.did;
+                        village.inhabitants = data.inhabitants;
+                        village.coordinates = data.coordinates;
+                    }
+
                     if (Object.prototype.toString.call(data.api.villages.data) === '[object Array]') {
                         angular.forEach(data.api.villages.data, function (value, key) {
                             var village = new Village;
-                            village.name = value.name;
-                            village.id = value.id;
-                            village.population = value.inhabitants;
-                            village.coordinates = value.coordinates;
+                            mapDataToVillage(value, village);
                             vm.player.villages.push(village);
                         });
                     } else {
                         var village = new Village;
-                        village.name = data.api.villages.data.name;
-                        village.id = data.api.villages.data.id;
-                        village.population = data.api.villages.data.inhabitants;
-                        village.coordinates = data.api.villages.data.coordinates;
+                        mapDataToVillage(data.api.villages.data, village);
                         vm.player.villages.push(village);
                     }
 
