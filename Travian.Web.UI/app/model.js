@@ -28,7 +28,7 @@ function Village() {
     this.name = "noname";
     this.player = '';
     this.alliance = '';
-    this.id = 0;
+    this.did = 0;
     this.uid = 0;
     this.aid = 0;
     this.inhabitants = 0;

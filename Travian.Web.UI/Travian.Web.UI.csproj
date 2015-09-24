@@ -71,6 +71,7 @@
     <Content Include="app\stateService.js" />
     <Content Include="app\villageController.js" />
     <Content Include="Content\Dashboard.css" />
+    <Content Include="Content\main.css" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-local-storage.min.js" />

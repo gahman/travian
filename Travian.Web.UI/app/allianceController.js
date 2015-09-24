@@ -9,11 +9,11 @@
         var allianceId = $location.search().id;
         var serverName = $location.search().server;
 
-        $scope.$watch('aid', function () { vm.getAlliance(vm.aid, serverName); });
+        //$scope.$watch('aid', function () { vm.getAlliance(vm.aid, serverName); });
 
-        if (allianceId) {
-            vm.aid = allianceId;
-        }
+        //if (allianceId) {
+        //    vm.aid = allianceId;
+        //}
 
         vm.getAlliance = function (uid, server) {
             if (typeof (server) === 'undefined') server = 'ts19';

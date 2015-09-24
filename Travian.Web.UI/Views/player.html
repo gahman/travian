@@ -15,18 +15,20 @@
 
 
 <div class="row placeholders">
-    <div class="col-xs-6 col-sm-6 placeholder">
+    <div class="col-xs-4 col-sm-4 placeholder">
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
-                        <th>X</th>
+                        <th>X</th>  
                         <th>Y</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="village in vm.player.villages | orderBy: 'village.name'">
+                    <tr ng-repeat="village in vm.player.villages | orderBy: 'village.name'" ng-click="vm.setSelectedVillage(village.did)" ng-class="{'table-selected': village.did === vm.idSelectedVillage}">
+                        <td>{{ village.did }}</td>
                         <td>{{ village.name }}</td>
                         <td>{{ village.x }}</td>
                         <td>{{ village.y }}</td>
@@ -36,7 +38,27 @@
         </div>
     </div>
 
-    <div class="col-xs-6 col-sm-6 placeholder">
+    <div class="col-xs-4 col-sm-4 placeholder">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="village in vm.player.villages | orderBy: 'village.name'">
+                        <td>{{ village.did }}</td>
+                        <td>{{ village.name }}</td>
+                        <td>{{ village.x }}</td>
+                        <td>{{ village.y }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-xs-4 col-sm-4 placeholder">
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>

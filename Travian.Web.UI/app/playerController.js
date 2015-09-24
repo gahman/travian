@@ -9,6 +9,14 @@
         var userId = $location.search().id;
         var serverName = $location.search().server;
 
+        // selection in table
+        vm.idSelectedVillage = null;
+        vm.setSelectedVillage = function (idSelected) {
+            vm.idSelectedVillage = idSelected;
+
+            // TODO: calculate time-table...
+        }
+
         vm.getPlayer = function (uid, server) {
             if (typeof (server) === 'undefined') server = 'ts19';
             travianFactory.travian().get({ id: uid, category: 'player', server: server }, function (data) {
@@ -25,7 +33,7 @@
 
                     var mapDataToVillage = function (data, village) {
                         village.name = data.name;
-                        village.id = data.id;
+                        village.did = data.did;
                         village.inhabitants = data.inhabitants;
                         village.coordinates = data.coordinates;
                     }
