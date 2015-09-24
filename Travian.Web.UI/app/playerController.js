@@ -9,12 +9,19 @@
         var userId = $location.search().id;
         var serverName = $location.search().server;
 
+        vm.distances = [];
         // selection in table
         vm.idSelectedVillage = null;
-        vm.setSelectedVillage = function (idSelected) {
-            vm.idSelectedVillage = idSelected;
+        vm.setSelectedVillage = function (selectedVillage) {
+            vm.idSelectedVillage = selectedVillage.did;
 
             // TODO: calculate time-table...
+            vm.distances = [];
+            angular.forEach(vm.player.villages, function (value, key) {
+                var dist = calcTravianDistance(selectedVillage, value);
+
+                vm.distances.push({ distance: dist });
+            });
         }
 
         vm.getPlayer = function (uid, server) {
@@ -27,9 +34,6 @@
                     vm.player.alliance = data.api.player.alliance;
 
                     console.log("player name: " + vm.player.name);
-
-                    // if more than one village
-                    console.log(Object.prototype.toString.call(data.api.villages.data));
 
                     var mapDataToVillage = function (data, village) {
                         village.name = data.name;

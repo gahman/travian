@@ -35,6 +35,8 @@ function Village() {
     this.x = 0;
     this.y = 0;
     this.coordinates = '';
+    this.speed = 6; // kata speed on normal x3 ?
+    this.tournament = 100; // 100%, normal unbuilt
 }
 Village.prototype = {
     set coordinates(coords) {

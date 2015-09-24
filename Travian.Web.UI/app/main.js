@@ -3,7 +3,7 @@
 
     angular.module('app', ['LocalStorageModule', 'ngResource', 'ngRoute'])
 
-        .config(function ($routeProvider, localStorageServiceProvider) {
+        .config(function ($routeProvider, $locationProvider, localStorageServiceProvider) {
             $routeProvider
                 // route for the player page
                 .when('/', {
@@ -29,6 +29,11 @@
                     controller: 'allianceController as vm'
                 });
 
+            // one of the steps to remove # from urls
+            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: false
+            });
             localStorageServiceProvider.setPrefix('travian').setNotify(true, true);
             // localStorageServiceProvider.setStorageType('sessionStorage');
         })
