@@ -9,6 +9,10 @@
         var userId = $location.search().id;
         var serverName = $location.search().server;
 
+        vm.unitSpeed = 6;
+        vm.landTime = "";
+        vm.tournament = 100;
+
         vm.distances = [];
         // selection in table
         vm.idSelectedVillage = null;
@@ -17,8 +21,11 @@
             vm.distances = [];
             angular.forEach(vm.player.villages, function (value, key) {
                 var dist = calcTravianDistance(selectedVillage, value);
+                console.log("distance: " + dist);
+                console.log("land time: " + vm.landTime);
+                var launchTime = calcLaunchTime(dist, vm.landTime);
 
-                vm.distances.push({ distance: dist });
+                vm.distances.push({ distance: dist, launchTime: launchTime });
             });
         }
 

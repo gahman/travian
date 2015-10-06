@@ -70,6 +70,10 @@
     <Content Include="app\components\player\playerController.js" />
     <Content Include="app\shared\stateService.js" />
     <Content Include="app\components\village\villageController.js" />
+    <Content Include="assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="assets\css\bootstrap-timepicker.min.css" />
+    <Content Include="assets\js\bootstrap-timepicker.min.js" />
     <Content Include="Content\Dashboard.css" />
     <Content Include="assets\css\main.css" />
     <Content Include="index.html" />
@@ -79,10 +83,15 @@
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-strap.js" />
+    <Content Include="Scripts\angular-strap.min.js" />
+    <Content Include="Scripts\angular-strap.tpl.js" />
+    <Content Include="Scripts\angular-strap.tpl.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-strap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

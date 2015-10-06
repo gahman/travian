@@ -20,6 +20,11 @@ function calcTravianDistance(fromVillage, toVillage) {
     return convertToHHMM(t);
 }
 
+// calculate the time to launch related to distance and time to land
+function calcLaunchTime(distance, timeToLand) {
+    return convertToHHMM(timeToLand - distance);
+}
+
 function convertToHHMM(info) {
     var hrs = parseInt(Number(info));
     var minTot = (Number(info) - hrs) * 60;

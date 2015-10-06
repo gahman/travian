@@ -1,7 +1,8 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app', ['LocalStorageModule', 'ngResource', 'ngRoute'])
+    // NOTE: mgcrera.ngStrap kanske behöver ngAnimate?
+    angular.module('app', ['mgcrea.ngStrap', 'LocalStorageModule', 'ngResource', 'ngRoute'])
 
         .config(function ($routeProvider, $locationProvider, localStorageServiceProvider) {
             $routeProvider
@@ -29,7 +30,7 @@
                     controller: 'allianceController as vm'
                 });
 
-            // one of the steps to remove # from urls
+            // one of the steps to remove # from urls, NOTE: weird behavior in FF
             //$locationProvider.html5Mode({
             //    enabled: true,
             //    requireBase: false
@@ -39,7 +40,6 @@
         })
 
         .controller('mainController', function ($scope) {
-            console.log("in main controller");
             $scope.selectedTab = 'player';
 
         })
