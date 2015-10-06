@@ -14,8 +14,6 @@
         vm.idSelectedVillage = null;
         vm.setSelectedVillage = function (selectedVillage) {
             vm.idSelectedVillage = selectedVillage.did;
-
-            // TODO: calculate time-table...
             vm.distances = [];
             angular.forEach(vm.player.villages, function (value, key) {
                 var dist = calcTravianDistance(selectedVillage, value);

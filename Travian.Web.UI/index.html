@@ -8,7 +8,7 @@
 	<title>T HElpEr</title>
 	<link href="Content/bootstrap.min.css" rel="stylesheet">
 	<link href="Content/dashboard.css" rel="stylesheet">
-    <link href="Content/main.css" rel="stylesheet" />
+	<link href="assets/css/main.css" rel="stylesheet" />
 	<!--<link href="Content/bootstrap-theme.css" rel="stylesheet" />-->
 
 	[if lt IE 9]>
@@ -16,7 +16,7 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]
 
-    <base href="/">
+	<base href="/">
 </head>
 <body ng-controller="mainController">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -48,7 +48,7 @@
 		<div class="row">
 			<div class="col-sm-3 col-md-2 sidebar">
 				<ul class="nav nav-sidebar">
-					<li ng-class="{'active':selectedTab === 'player'}" ng-click="selectedTab = 'player'"><a href="#player">Player import<span class="sr-only">(current)</span></a></li>
+					<li ng-class="{'active':selectedTab === 'player'}" ng-click="selectedTab = 'player'"><a href="#player">Player<span class="sr-only">(current)</span></a></li>
 					<li ng-class="{'active':selectedTab === 'village'}" ng-click="selectedTab = 'village'"><a href="#village">Village</a></li>
 					<li ng-class="{'active':selectedTab === 'alliance'}" ng-click="selectedTab = 'alliance'"><a href="#alliance">Alliance</a></li>
 					<li ng-class="{'active':selectedTab === 'Export'}" ng-click="selectedTab = 'Export'"><a href="#">Export</a></li>
@@ -67,9 +67,9 @@
 				</ul>
 			</div>
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<h1 class="page-header">Dashboard</h1>
+				<h1 class="page-header">{{ selectedTab.toUpperCase() }}</h1>
 
-				<div class="row placeholders">
+				<!--<div class="row placeholders">
 					<div class="col-xs-6 col-sm-3 placeholder">
 						<img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
 						<h4>Label</h4>
@@ -90,9 +90,9 @@
 						<h4>Label</h4>
 						<span class="text-muted">Something else</span>
 					</div>
-				</div>
+				</div>-->
 
-				<h2 class="sub-header">Section title</h2>
+				<!--<h2 class="sub-header">section</h2>-->
 				<div id="main">
 					<div ng-view></div>
 				</div>
@@ -104,13 +104,13 @@
 	<script src="Scripts/angular-resource.min.js"></script>
 	<script src="Scripts/angular-route.min.js"></script>
 	<script src="Scripts/bootstrap.min.js"></script>
-	<script src="app/model.js"></script>
-    <script src="Scripts/angular-local-storage.min.js"></script>
-	<script src="app/main.js"></script>
-    <script src="Scripts/utilities.js"></script>
-    <script src="app/stateService.js"></script>
-	<script src="app/playerController.js"></script>
-    <script src="app/villageController.js"></script>
-    <script src="app/allianceController.js"></script>
+	<script src="Scripts/angular-local-storage.min.js"></script>
+	<script src="app/shared/model.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="assets/js/utilities.js"></script>
+	<script src="app/shared/stateService.js"></script>
+	<script src="app/components/player/playerController.js"></script>
+	<script src="app/components/village/villageController.js"></script>
+	<script src="app/components/alliance/allianceController.js"></script>
 </body>
 </html>

@@ -7,38 +7,39 @@
             $routeProvider
                 // route for the player page
                 .when('/', {
-                    templateUrl: 'views/player.html',
+                    templateUrl: 'app/components/player/playerView.html',
                     controller: 'playerController as vm'
                 })
 
                 // route for the player page
                 .when('/player', {
-                    templateUrl: 'views/player.html',
+                    templateUrl: 'app/components/player/playerView.html',
                     controller: 'playerController as vm'
                 })
 
                 // route for the village page
                 .when('/village', {
-                    templateUrl: 'views/village.html',
+                    templateUrl: 'app/components/village/villageView.html',
                     controller: 'villageController as vm'
                 })
 
                 // route for the alliance page
                 .when('/alliance', {
-                    templateUrl: 'views/alliance.html',
+                    templateUrl: 'app/components/alliance/allianceView.html',
                     controller: 'allianceController as vm'
                 });
 
             // one of the steps to remove # from urls
-            $locationProvider.html5Mode({
-                enabled: true,
-                requireBase: false
-            });
+            //$locationProvider.html5Mode({
+            //    enabled: true,
+            //    requireBase: false
+            //});
             localStorageServiceProvider.setPrefix('travian').setNotify(true, true);
             // localStorageServiceProvider.setStorageType('sessionStorage');
         })
 
         .controller('mainController', function ($scope) {
+            console.log("in main controller");
             $scope.selectedTab = 'player';
 
         })

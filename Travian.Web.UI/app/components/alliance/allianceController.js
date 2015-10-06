@@ -4,6 +4,7 @@
     angular.module('app').controller('allianceController', allianceController);
 
     function allianceController($scope, $location, travianFactory, stateService) {
+        console.log("in alliance controller");
         var vm = this;
 
         var allianceId = $location.search().id;

@@ -66,12 +66,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\allianceController.js" />
-    <Content Include="app\playerController.js" />
-    <Content Include="app\stateService.js" />
-    <Content Include="app\villageController.js" />
+    <Content Include="app\components\alliance\allianceController.js" />
+    <Content Include="app\components\player\playerController.js" />
+    <Content Include="app\shared\stateService.js" />
+    <Content Include="app\components\village\villageController.js" />
     <Content Include="Content\Dashboard.css" />
-    <Content Include="Content\main.css" />
+    <Content Include="assets\css\main.css" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-local-storage.min.js" />
@@ -91,8 +91,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\main.js" />
-    <Content Include="app\model.js" />
+    <Content Include="app\app.module.js" />
+    <Content Include="app\shared\model.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -115,17 +115,20 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\utilities.js" />
-    <Content Include="Views\alliance.html" />
-    <Content Include="Views\navbar.html" />
-    <Content Include="Views\player.html" />
-    <Content Include="Views\village.html" />
+    <Content Include="assets\js\utilities.js" />
+    <Content Include="app\components\alliance\allianceView.html" />
+    <Content Include="app\shared\navbar.html" />
+    <Content Include="app\components\player\playerView.html" />
+    <Content Include="app\components\village\villageView.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
