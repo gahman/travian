@@ -10,26 +10,53 @@
         var serverName = $location.search().server;
 
         vm.unitSpeed = 6;
-        vm.landTime = "";
+        vm.landTime = new Date();
         vm.tournament = 100;
 
         vm.distances = [];
-        // selection in table
         vm.idSelectedVillage = null;
-        vm.setSelectedVillage = function (selectedVillage) {
-            vm.idSelectedVillage = selectedVillage.did;
-            vm.distances = [];
-            angular.forEach(vm.player.villages, function (value, key) {
-                var dist = calcTravianDistance(selectedVillage, value);
-                console.log("distance: " + dist);
-                console.log("land time: " + vm.landTime);
-                var launchTime = calcLaunchTime(dist, vm.landTime);
+        vm.selectedVillage = null;
 
-                vm.distances.push({ distance: dist, launchTime: launchTime });
-            });
+        vm.getPlayer = getPlayer;
+        vm.setSelectedVillage = setSelectedVillage;
+        vm.hasExpired = hasExpired;
+
+        $scope.$watch('vm.landTime', function () { // assuming that view use the same 'vm', othwerwise go 'playerController.landTime'
+            updateTables();
+        });
+        
+        // return true if the date (time) has passed the current date (time)
+        function hasExpired(date) {
+            return date <= Date.now();
         }
 
-        vm.getPlayer = function (uid, server) {
+        function setSelectedVillage(selectedVillage) {
+            vm.idSelectedVillage = selectedVillage.did;
+            vm.selectedVillage = selectedVillage;
+            updateTables();
+        }
+
+        // update the distance and launch time tables
+        function updateTables() {
+            if (vm.landTime && vm.selectedVillage) {
+                vm.distances = [];
+                angular.forEach(vm.player.villages, function (village, key) {
+                    var dist = calcTravianDistance(vm.selectedVillage, village); // d:hh:mm:ss
+                    var p = stringToParams(dist);
+                    var launchDate = new Date(
+                        vm.landTime.getFullYear(),
+                        vm.landTime.getMonth(),
+                        vm.landTime.getDate() - p.days,
+                        vm.landTime.getHours() - p.hours,
+                        vm.landTime.getMinutes() - p.minutes,
+                        vm.landTime.getSeconds() - p.seconds,
+                        0);
+                    vm.distances.push({ distance: dist, launchTime: launchDate, formattedLaunchTime: dateToString(launchDate) });
+                });
+            };
+        }
+
+        function getPlayer(uid, server) {
             if (typeof (server) === 'undefined') server = 'ts19';
             travianFactory.travian().get({ id: uid, category: 'player', server: server }, function (data) {
                 if (data.api) {

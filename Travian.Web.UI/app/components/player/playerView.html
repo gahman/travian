@@ -19,16 +19,19 @@
         <div class="col-xs-6 col-sm-3 placeholder">
             <label class="control-label">Unit speed</label>
             <input class="form-control" ng-model="vm.unitSpeed" placeholder="speed" type="text">
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
             <label class="control-label">Tournament</label>
             <input class="form-control" ng-model="vm.tournament" placeholder="100" type="text">
         </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+            <label class="control-label">Target player</label>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="vm.player.uid" placeholder="enter player uid (ex 2521)">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click="vm.getPlayer(vm.player.uid)" type="button">Get</button>
+                </span>
+            </div>
+        </div>
     </div>
-</div>
-
-<div>
-    Name: {{ vm.player.name }}, Alliance: {{ vm.player.alliance }}, UID: {{ vm.player.uid }}, Villages: {{ vm.villages.length }}
 </div>
 
 <div class="row placeholders">
@@ -79,8 +82,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="d in vm.distances">
-                        <td>{{ d.launchTime }}</td>
+                    <tr ng-repeat="d in vm.distances" ng-class="{'expired': vm.hasExpired(d.launchTime) }">
+                        <td>{{ d.formattedLaunchTime }}</td>
                     </tr>
                 </tbody>
             </table>

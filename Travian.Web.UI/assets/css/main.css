@@ -2,3 +2,8 @@
       background-color: #428bca !important;
       color: #ffffff !important;
 }
+
+/*used when date has expired in table*/
+.expired {
+    color: red !important;
+}

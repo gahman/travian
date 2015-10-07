@@ -4,17 +4,10 @@
     angular.module('app').controller('allianceController', allianceController);
 
     function allianceController($scope, $location, travianFactory, stateService) {
-        console.log("in alliance controller");
         var vm = this;
 
         var allianceId = $location.search().id;
         var serverName = $location.search().server;
-
-        //$scope.$watch('aid', function () { vm.getAlliance(vm.aid, serverName); });
-
-        //if (allianceId) {
-        //    vm.aid = allianceId;
-        //}
 
         vm.getAlliance = function (uid, server) {
             if (typeof (server) === 'undefined') server = 'ts19';
