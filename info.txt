@@ -1,0 +1,8 @@
+installera node.js
+
+installera karma o plugins.. typ:
+npm install karma-jasmine
+
+plugin för detaljer i consol:
+npm install karma-verbose-reporter
+lägg till reporter: 'verbose' i karma config

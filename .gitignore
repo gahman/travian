@@ -3,8 +3,13 @@ obj/
 TestResults/
 .vs/
 output/
+node_modules/
+artifacts/
+TestResults/
 
 # Temporary file directory
 tmp/
 
 crash.log
+phantomjs.exe
+

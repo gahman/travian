@@ -5,15 +5,15 @@ function distance(v1, v2) {
     return Math.sqrt(Math.pow(v1.x - v2.x, 2.0) + Math.pow(v1.y - v2.y, 2.0));
 }
 
-// calculate the distance in travian in time. Tournament and unit speed are taken from the village objects.
-function calcTravianDistance(fromVillage, toVillage) {
+// calculate the distance (in time) in travian between two villages
+function calcTravianDistance(fromVillage, toVillage, unitSpeed, tournament) {
     var d = distance(fromVillage, toVillage);
     var t = 0.0; // hours (with decimals) of traveltime
 
     if (d <= 20.0) {
-        t = d / fromVillage.speed;
+        t = d / unitSpeed;
     } else {
-        t = 20.0 / fromVillage.speed + (d - 20.0) / (fromVillage.speed * fromVillage.tournament / 100.0);
+        t = 20.0 / unitSpeed + (d - 20.0) / (unitSpeed * tournament / 100.0);
     }
 
     // TODO: check return values!!

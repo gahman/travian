@@ -3,6 +3,7 @@
     describe("when calling getDouble", function() {      
         it("should return double value", function () {
             expect(getDouble(2)).toBe(4);
+            pending("this function will be removed later");
         });
     });
 

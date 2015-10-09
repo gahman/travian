@@ -1,4 +1,8 @@
-﻿(function () {
+﻿/// <reference path="../../shared/model.js" />
+/// <reference path="C:\Projects\Travian\Web\Travian.Web\Travian.Web.UI\assets/js/utilities.js" />
+/// <reference path="C:\Projects\Travian\Web\Travian.Web\Travian.Web.UI\Scripts\angular.min.js" />
+
+(function () {
     'use strict';
 
     angular.module('app').controller('playerController', playerController);
@@ -11,7 +15,7 @@
 
         vm.unitSpeed = 6;
         vm.landTime = new Date();
-        vm.tournament = 100;
+        vm.tournament = 101;
 
         vm.distances = [];
         vm.idSelectedVillage = null;
@@ -35,13 +39,13 @@
             vm.selectedVillage = selectedVillage;
             updateTables();
         }
-
+        
         // update the distance and launch time tables
         function updateTables() {
             if (vm.landTime && vm.selectedVillage) {
                 vm.distances = [];
                 angular.forEach(vm.player.villages, function (village, key) {
-                    var dist = calcTravianDistance(vm.selectedVillage, village); // d:hh:mm:ss
+                    var dist = calcTravianDistance(vm.selectedVillage, village, vm.unitSpeed, vm.tournament); // d:hh:mm:ss
                     var p = stringToParams(dist);
                     var launchDate = new Date(
                         vm.landTime.getFullYear(),
