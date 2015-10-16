@@ -34,6 +34,7 @@ describe("playerController", function () {
 
     describe("setSelectedVillage", function () {
         it("should set the selected village", function () {
+            expect(controller.selectedVillage).toBeNull();
             controller.setSelectedVillage(new Village());
             expect(controller.selectedVillage).not.toBeNull();
         });

@@ -5,7 +5,7 @@
             <div class="input-group">
                 <input type="text" class="form-control" ng-model="vm.player.uid" placeholder="enter player uid (ex 2521)">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" ng-click="vm.getPlayer(vm.player.uid)" type="button">Get</button>
+                    <button data-ng-attr-id="playerBtn" class="btn btn-default" ng-click="vm.getPlayer(vm.player, 'playerBtn')" type="button">Get</button>
                 </span>
             </div>
         </div>
@@ -25,9 +25,9 @@
         <div class="col-xs-6 col-sm-3 placeholder">
             <label class="control-label">Target player</label>
             <div class="input-group">
-                <input type="text" class="form-control" ng-model="vm.player.uid" placeholder="enter player uid (ex 2521)">
+                <input type="text" class="form-control" ng-model="vm.targetPlayer.uid" placeholder="enter target uid (ex 2521)">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" ng-click="vm.getPlayer(vm.player.uid)" type="button">Get</button>
+                    <button data-ng-attr-id="targetBtn" class="btn btn-default" ng-click="vm.getPlayer(vm.targetPlayer, 'targetBtn')" type="button">Get</button>
                 </span>
             </div>
         </div>
@@ -46,7 +46,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="village in vm.player.villages | orderBy: 'village.name'" ng-click="vm.setSelectedVillage(village)" ng-class="{'table-selected': village.did === vm.idSelectedVillage}">
+                    <tr ng-repeat="village in vm.player.villages" ng-click="vm.setSelectedVillage(village)" ng-class="{'table-selected': village.did === vm.selectedVillage.did}">
                         <td>{{ village.name }}</td>
                         <td>{{ village.x }}</td>
                         <td>{{ village.y }}</td>
@@ -101,7 +101,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="village in vm.player.villages">
+                    <tr ng-repeat="village in vm.targetPlayer.villages" ng-click="vm.setSelectedTargetVillage(village)" ng-class="{'table-selected': village.did === vm.selectedTargetVillage.did}">
                         <td>{{ village.name }}</td>
                         <td>{{ village.x }}</td>
                         <td>{{ village.y }}</td>

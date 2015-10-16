@@ -36,8 +36,8 @@ module.exports = function(config) {
       "Travian.Web.UI/app/components/village/villageController.js",
       "Travian.Web.UI/app/components/alliance/allianceController.js",
       
-      'Travian.Web.UI.Tests/spec/PlayerControllerSpec.js'
-      
+      'Travian.Web.UI.Tests/spec/PlayerControllerSpec.js',
+      'Travian.Web.UI.Tests/spec/StateServiceSpec.js'      
     ],
 
 
@@ -83,6 +83,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: false
   })
 }

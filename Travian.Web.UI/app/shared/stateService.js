@@ -4,14 +4,19 @@
     angular.module('app').service('stateService', stateService);
 
     function stateService(localStorageService) {
-
+        
         var activePlayer = ''; // active player
-        var activeAlliance = ''; // active alliance
-
+        var activeAlliance = ''; // active alliance    
+        var targetPlayer = ''; // target player
 
         var setActivePlayer = function (player) {
             localStorageService.set('activePlayer', player);
             activePlayer = player;
+        }
+
+        var setTargetPlayer = function (player) {
+            localStorageService.set('targetPlayer', player);
+            targetPlayer = player;
         }
 
         var getActivePlayer = function () {
@@ -23,6 +28,17 @@
             }
 
             return activePlayer;
+        }
+        
+        var getTargetPlayer = function () {
+            if (!targetPlayer) {
+                var targetPlayer = localStorageService.get('targetPlayer');
+                if (!targetPlayer) {
+                    targetPlayer = new Player;
+                }
+            }
+            
+            return targetPlayer;
         }
 
         var setActiveAlliance = function (alliance) {
@@ -47,7 +63,10 @@
             getActivePlayer: getActivePlayer,
 
             setActiveAlliance: setActiveAlliance,
-            getActiveAlliance: getActiveAlliance
+            getActiveAlliance: getActiveAlliance,
+            
+            setTargetPlayer: setTargetPlayer,
+            getTargetPlayer: getTargetPlayer,
         };
     };
 })();
