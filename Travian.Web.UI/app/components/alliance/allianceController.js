@@ -10,7 +10,7 @@
         var serverName = $location.search().server;
 
         vm.getAlliance = function (uid, server) {
-            if (typeof (server) === 'undefined') server = 'ts19';
+            if (typeof (server) === 'undefined') server = 'ts19.travian.se';
             travianFactory.travian().get({ id: uid, category: 'alliance', server: server }, function (data) {
                 if (data.api) {
                     vm.alliance = data.api.alliance;

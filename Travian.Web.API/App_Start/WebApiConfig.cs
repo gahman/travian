@@ -6,6 +6,8 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using Travian.Web.API.Formatters;
+using System.Web.Http.Cors;
+using Travian.Web.API.Models;
 
 namespace Travian.Web.API
 {
@@ -20,6 +22,12 @@ namespace Travian.Web.API
 
             config.EnableCors();
 
+            //var cors = new EnableCorsAttribute(
+            //    origins: "*",
+            //    headers: "*",
+            //    methods: "*");
+            //config.EnableCors(cors);
+
             //config.Formatters.Add(new VillageCsvFormatter());
 
             // Web API routes
@@ -30,6 +38,9 @@ namespace Travian.Web.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var context = new TravianContext();
+            context.Database.Initialize(true);
         }
     }
 }

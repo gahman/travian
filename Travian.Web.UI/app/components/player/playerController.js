@@ -47,7 +47,7 @@
         }
 
         function getPlayer(player, playerType, server) {
-            if (typeof (server) === 'undefined') server = 'ts19';
+            if (typeof (server) === 'undefined') server = 'ts19.travian.se';
             travianFactory.travian().get({ id: player.uid, category: 'player', server: server }, function (data) {
                 if (data.api) {
 

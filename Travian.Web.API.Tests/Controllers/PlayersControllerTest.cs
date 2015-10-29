@@ -36,14 +36,25 @@ namespace Travian.Web.API.Tests.Controllers
             TravianController controller = new TravianController();
 
             var someFile = await controller.GetJsonAsync(id);
-
             var result = someFile;
-
-
             var content = await result.Content.ReadAsStringAsync(); 
 
             Assert.IsNotNull(result.Content);
         }
+
+
+        //[TestMethod]
+        //public async Task GetJsonById_ForceFalse_ShouldReturnExisting()
+        //{
+        //    int id = 2403; // existing player
+        //    TravianController controller = new TravianController();
+
+        //    var someFile = await controller.GetJsonAsync(id, "player", "tx3.travian.se", false);
+        //    var result = someFile;
+        //    var content = await result.Content.ReadAsStringAsync();
+
+        //    Assert.IsTrue(content.Contains("Klurig"));
+        //}
 
     }
 }
