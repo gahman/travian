@@ -39,6 +39,8 @@ namespace Travian.Web.API
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            ////config.Services.Add
+
             var context = new TravianContext();
             context.Database.Initialize(true);
         }

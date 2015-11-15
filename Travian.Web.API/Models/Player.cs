@@ -51,7 +51,7 @@ namespace Travian.Web.API.Models
         /// Update the properties recursive (mapped to root)
         /// </summary>
         /// <param name="root">the new values to update with</param>
-        public void Update(TravianContext context, ApiRoot root)
+        public void Update(IDbContext context, ApiRoot root)
         {
             this.Uid = root.Player.Uid;
             this.Name = root.Player.Name;
